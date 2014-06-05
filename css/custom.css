@@ -1,0 +1,7 @@
+﻿.content
+ {
+    margin: 40px 40px;
+}
+.content > .content {
+    margin: 0.2em 0.8em;
+}
