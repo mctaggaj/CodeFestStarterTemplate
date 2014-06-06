@@ -39,4 +39,19 @@ describe('my app', function() {
     });
 
   });
+
+  describe('testing', function () {
+
+      beforeEach(function () {
+          // Navigate to the testing page.
+          browser.get('index.html#/testing');
+      });
+
+
+      it('should display the default test result value', function () {
+          // Find the element bound to the 'Result' property on the model, get it's text value and make sure it matches 'n/a'.
+          expect(element(by.model('Result')).getText()).toMatch("n/a");
+      });
+
+  });
 });

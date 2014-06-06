@@ -15,7 +15,7 @@ config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/bootstrap', { templateUrl: 'templates/bootstrap.tpl.html' });
     $routeProvider.when('/angular', { templateUrl: 'templates/angular.tpl.html' });
     $routeProvider.when('/getting-started', { templateUrl: 'templates/template.tpl.html' });
-    $routeProvider.when('/testing', { templateUrl: 'templates/testing.tpl.html' });
+    $routeProvider.when('/testing', { templateUrl: 'templates/testing.tpl.html', controller: 'TestController' });
 
     $routeProvider.otherwise({ redirectTo: 'home' });
 
