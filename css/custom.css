@@ -1,6 +1,7 @@
 ﻿.content
  {
     margin: 40px 40px;
+    margin-top: 0;
 }
 .content > .content {
     margin: 0.2em 0.8em;

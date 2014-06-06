@@ -97,7 +97,12 @@
     <Content Include="templates\angular.tpl.html" />
     <Content Include="templates\bootstrap.tpl.html" />
     <Content Include="templates\home.tpl.html" />
+    <Content Include="templates\testing.tpl.html" />
     <Content Include="templates\template.tpl.html" />
+    <Content Include="test\e2e\scenarios.js" />
+    <Content Include="test\karma.conf.js" />
+    <Content Include="test\protractor-conf.js" />
+    <Content Include="test\unit\controllersSpec.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
