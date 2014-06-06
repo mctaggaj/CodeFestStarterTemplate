@@ -11,11 +11,38 @@ angular.module('myApp', [
   'myApp.controllers'
 ]).
 config(['$routeProvider', function ($routeProvider) {
-    $routeProvider.when('/home', { templateUrl: 'templates/home.tpl.html' });
-    $routeProvider.when('/bootstrap', { templateUrl: 'templates/bootstrap.tpl.html' });
-    $routeProvider.when('/angular', { templateUrl: 'templates/angular.tpl.html' });
-    $routeProvider.when('/getting-started', { templateUrl: 'templates/template.tpl.html' });
-    $routeProvider.when('/testing', { templateUrl: 'templates/testing.tpl.html' });
+
+    // Define routes here.
+
+    $routeProvider.when('/home', {
+        templateUrl: 'templates/home.tpl.html',
+        controller: 'HomeController',
+        title: 'Home'
+    });
+
+    $routeProvider.when('/bootstrap', {
+        templateUrl: 'templates/bootstrap.tpl.html',
+        controller: 'BootstrapExamplesController',
+        title: 'Bootstrap'
+    });
+
+    $routeProvider.when('/angular', {
+        templateUrl: 'templates/angular.tpl.html',
+        controller: 'AngularExamplesController',
+        title: 'Angular'
+    });
+
+    $routeProvider.when('/getting-started', {
+        templateUrl: 'templates/template.tpl.html',
+        controller: 'GettingStartedController',
+        title: 'Getting Started'
+    });
+
+    $routeProvider.when('/testing', {
+        templateUrl: 'templates/testing.tpl.html',
+        controller: 'TestController',
+        title: 'Testing'
+    });
 
     $routeProvider.otherwise({ redirectTo: 'home' });
 

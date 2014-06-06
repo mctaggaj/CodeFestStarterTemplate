@@ -15,23 +15,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/todo.css"/>
     <link rel="stylesheet" href="css/app.css"/>
-    <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js' type='text/javascript'></script>
-    <script src="bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+    <link rel="stylesheet" href="css/custom.css" />    
     <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
-    
-    <div class="navbar navbar-default navbar-fixed-top" role="navigation" ng-controller="MainController">
+<body ng-controller="AppController">
+    <!-- Navigation Bar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
-                </button>
+                </button>                
                 <a class="navbar-brand" href="#home" ng-click="selectedPage=0">YOUR APP</a>
             </div>
             <div class="navbar-collapse collapse navbar-responsive-collapse">
@@ -48,6 +48,7 @@
                     <li ng-class="{active: selectedPage==4}" ng-click="selectedPage=4">
                         <a href="#/testing">testing</a>
                     </li>
+                    <!-- TOOD: You can add new items to the menu here. -->
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
@@ -58,24 +59,22 @@
         </div>
     </div>
 
-<!-- This is where we inject our templates -->
-<div ng-view class="slide" style="margin-top: 60px"></div>
+    <!-- Main content area. This is where we inject our view templates (view templates are located in /templates). -->
+    <div ng-view class="slide" style="margin-top: 60px"></div>
 
 
-<!-- In production use:
-<script src="dist/js/main.min.js"></script>
--->
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-animate/angular-animate.js"></script>
+    <!-- Load Scripts last to allow page to load quicker. -->
 
-<!-- In production use:
-<script src="dist/js/main.min.js"></script>
--->
-<script src="js/app.js"></script>
-<script src="js/services.js"></script>
-<script src="js/controllers.js"></script>
-<script src="js/filters.js"></script>
-<script src="js/directives.js"></script>
+    <!-- 3rd-party Scripts -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+
+    <!-- App-specific Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
 </body>
 </html>
