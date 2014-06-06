@@ -11,8 +11,9 @@
                     &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/bootstrap', { templateUrl: 'templates/bootstrap.tpl.html' });<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/angular', { templateUrl: 'templates/angular.tpl.html' });<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/template', { templateUrl: 'templates/template.tpl.html'});<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/testing', { templateUrl: 'templates/testing.tpl.html'});<br />
                     &nbsp;&nbsp;&nbsp;&nbsp;<b>$routeProvider.when('/page', { templateUrl: 'templates/page.tpl.html' });<br /></b><br />
-                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.otherwise({ redirectTo: '/home' });<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.otherwise({ redirectTo: '/home' });
                     }]);
                 </p>
             </div>
@@ -28,10 +29,13 @@
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/angular">angular&lt;/a><br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==3}" ng-click="selectedPage=3"><br />
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/_template">template&lt;/a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/template">template&lt;/a><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==3}" ng-click="selectedPage=4"><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/testing">testing&lt;/a><br />
                 &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
                 <b>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==4}" ng-click="selectedPage=4"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==5}" ng-click="selectedPage=5"><br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/page">page&lt;/a><br />
                     &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
                 </b>
