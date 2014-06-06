@@ -1,1 +1,1 @@
-protractor test/protractor-conf.js
+cmd /k protractor test/protractor-conf.js
