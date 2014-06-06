@@ -1,23 +1,22 @@
 ﻿<div class="container" ng-init="template=true;">
     <h2>Unit Testing</h2>
-    <div class="content">
-        <p>
-            For unit testing we use <a href="http://jasmine.github.io/2.0/introduction.html">jasmine</a> tests run by <a href="http://karma-runner.github.io/0.12/index.html">karma</a>.<br/>
-            Unit tests are located in the <b>test\unit</b> folder and can be started by running the <b>test_unit.bat</b> file
-        </p>
-        <h3>Example</h3>
-        
-        <button class="btn" ng-click="TestMe()">Test Me</button>
-        <div id="testResult">{{Result}}</div>
-    </div>
+    <p>
+        For unit testing we use <a href="http://jasmine.github.io/2.0/introduction.html">jasmine</a> tests run by <a href="http://karma-runner.github.io/0.12/index.html">karma</a>.
+        Unit tests are located in the <code>test\unit</code> folder and can be started by running the <code>test_unit.bat</code> file
+    </p>
     <h2>Integration (End-to-End) Testing</h2>
-    <div class="content">
-        <p>
-            For integration testing we use <a href="https://github.com/angular/protractor">protractor</a>.<br />
-            Integration tests are located in the <b>test\e2e</b> folder and can be started by running the <b>test_e2e.bat</b> file <b>(IMPORTANT: The Visual Studio project must be running for protractor to work)</b>
-        </p>
-        <p>
-            For more info, read the <a href="https://github.com/angular/protractor/blob/master/docs/getting-started.md" target="_blank">getting started docs</a>.
-        </p>
-    </div>
+    <p>
+        For integration testing we use <a href="https://github.com/angular/protractor">protractor</a>. Integration tests are located 
+        in the <code>test\e2e</code> folder and can be started by running the <code>test_e2e.bat</code> file.        
+    </p>
+    <div class="alert alert-info"><i class="fa fa-warning"></i> IMPORTANT: The Visual Studio project must be running for protractor to work.</div>
+    <p>
+        For more info, read the <a href="https://github.com/angular/protractor/blob/master/docs/getting-started.md" target="_blank">getting started docs</a>.
+    </p>
+    <h2>Testing Example</h2>
+    <p>
+        Below is some functionality that we want to write some unit and e2e tests for. You can view tests for this functionlity in the <code>test/e2e</code> and <code>test/unit</code> folders
+    </p>
+    <button class="btn btn-info" ng-click="TestMe()">Test Me</button>
+    <div id="testResult">{{Result}}</div>
 </div>
