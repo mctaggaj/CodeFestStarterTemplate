@@ -1,0 +1,66 @@
+﻿<div class="container" ng-init="template=true;">
+    <h2>Getting Started: Common tasks</h2>
+    <ol>
+        <li>To add a new page, under <b>templates</b> add a new html file named <b>page.tpl.html</b> (replace "page" with the name of your page)</li>
+        <li>
+            <p>
+                In the app.js file under <b>js</b> add a new route to the <b>$routeProvider</b> function
+            </p>
+            <div class="well">
+                <code>
+                    config(['$routeProvider', function($routeProvider) {<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/home', { templateUrl: 'templates/home.tpl.html' });<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/bootstrap', { templateUrl: 'templates/bootstrap.tpl.html' });<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/angular', { templateUrl: 'templates/angular.tpl.html' });<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/template', { templateUrl: 'templates/template.tpl.html'});<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.when('/testing', { templateUrl: 'templates/testing.tpl.html'});<br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;<b>$routeProvider.when('/page', { templateUrl: 'templates/page.tpl.html' });</b><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;$routeProvider.otherwise({ redirectTo: '/home' });
+                    }]);
+                </code>
+            </div>
+            <p>
+                In the <b>index.html</b> file add a new list item to the navbar
+            </p>
+            <div class="well">
+                <code>
+                    &lt;ul class="nav navbar-nav"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==1}" ng-click="selectedPage=1"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/bootstrap">bootstrap&lt;/a><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==2}" ng-click="selectedPage=2"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/angular">angular&lt;/a><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==3}" ng-click="selectedPage=3"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/gettingstarted">getting started&lt;/a><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==3}" ng-click="selectedPage=4"><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/testing">testing&lt;/a><br />
+                    &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                    <b>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;li ng-class="{active: selectedPage==5}" ng-click="selectedPage=5"><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a href="#/page">page&lt;/a><br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/li><br />
+                    </b>
+                    &lt;/ul>
+                </code>
+            </div>
+            <p>
+                Customize the new page to add your new functionality.
+            </p>
+        </li>
+        <li>
+            You can remove any pages that don't make sense for your app (e.g. the bootstrap and angular example pages). 
+        </li>
+        <li>
+            To install third party controls, you can use either the Node Package Manager (NPM) or the Bower Package Manager. 
+            Which one you choose to use depends on the library you are trying to add. To do this, open a Command Prompt and
+            run one of the following example commands (you have to modify the name of the dependency you want to install):
+            <ul>
+                <li><code>bower install angular-google-maps</code></li>
+                <li><code>npm install underscore</code></li>
+                
+            </ul>
+        </li>
+    </ol>
+</div>

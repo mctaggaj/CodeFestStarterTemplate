@@ -32,8 +32,8 @@ config(['$routeProvider', function ($routeProvider) {
         title: 'Angular'
     });
 
-    $routeProvider.when('/getting-started', {
-        templateUrl: 'templates/template.tpl.html',
+    $routeProvider.when('/gettingstarted', {
+        templateUrl: 'templates/gettingstarted.tpl.html',
         controller: 'GettingStartedController',
         title: 'Getting Started'
     });

@@ -98,7 +98,7 @@
     <Content Include="templates\bootstrap.tpl.html" />
     <Content Include="templates\home.tpl.html" />
     <Content Include="templates\testing.tpl.html" />
-    <Content Include="templates\template.tpl.html" />
+    <Content Include="templates\gettingstarted.tpl.html" />
     <Content Include="test\e2e\scenarios.js" />
     <Content Include="test\karma.conf.js" />
     <Content Include="test\protractor-conf.js" />

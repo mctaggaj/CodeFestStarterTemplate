@@ -12,7 +12,7 @@ appModule.controller('AppController', function ($scope, $route) {
 
 /* Controller for the Home page */
 appModule.controller('HomeController', function ($scope) {
-    $scope.WelcomeMessage = "Welcome!"
+    $scope.WelcomeMessage = "<CODEFEST/> Welcome!"
 });
 
 /* Controller for the Bootstrap Examples page */
